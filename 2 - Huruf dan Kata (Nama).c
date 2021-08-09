@@ -4,7 +4,6 @@ char huruf[50], kata[50];
 int i, j, nInput, nHuruf, nKata;
 
 void Huruf() {
-	//Kelompok 2 (No.1)
 	//hitung nHuruf
 	while (huruf[i] != '\0') {
 		if(huruf[i] != ' ') {
@@ -18,7 +17,6 @@ void Huruf() {
 }
 
 void Kata(){
-	//kelompok 2 (No.2)
 	//cetak kata dari belakang dan hitung nKata
 	printf("\nUrutan nama dari kata belakang  : ");
 	for(i=nInput-1; i>=-1; i--){

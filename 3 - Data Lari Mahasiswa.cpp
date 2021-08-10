@@ -83,7 +83,7 @@ struct data_mhs temp_mhs;
    printf("--------------------------------------------------------------------\n");
    cout<<"\n\n";
    
-   //mencari waktu rata-rata seluruh pelari dan pelari tercepat
+  //Sorting data lari mahasiswa dari waktu yang tercepat (Bubble Sort - ascending)
  	   for (int i=1;i<jml_mhs;i++) {
             for (int b=0; b<jml_mhs-i; b++) {
              if (mhs[b].wkt[b].detik > mhs[b+1].wkt[b+1].detik){
@@ -102,10 +102,8 @@ struct data_mhs temp_mhs;
                 strcpy(temp_mhs.tWkt, mhs[b].wkt[b].nWkt);
                 strcpy(mhs[b].wkt[b].nWkt, mhs[b+1].wkt[b+1].nWkt);
                 strcpy(mhs[b+1].wkt[b+1].nWkt, temp_mhs.tWkt);
-
              }
-
-            for (i=0;i<jml_mhs;i++){
+            }
   	printf("Data Disorting berdasarkan Pelari Tercepat : \n");
   	printf("--------------------------------------------------------------------\n");
   	printf("| No. |           NAMA           |    USIA    |    WAKTU TEMPUH    |\n");
@@ -116,11 +114,9 @@ struct data_mhs temp_mhs;
    }
    printf("--------------------------------------------------------------------\n");
    cout<<"\n\n";
-            }
         }
-    }
 	
-	//waktu rata-rata seluruh peserta dan pelari tercepat
+	//mencari waktu rata-rata seluruh peserta dan pelari tercepat
 	for (i=0; i<jml_mhs; i++) {
 		rarata += mhs[i].wkt[i].detik;
 	}
@@ -129,14 +125,14 @@ struct data_mhs temp_mhs;
     int mod = rarata%3600;
     int menit = mod/60;
     int detik = mod%60;
-   printf("--------------------------------------------------------------------\n");
+    printf("--------------------------------------------------------------------\n");
     printf("Waktu rata-rata seluruh pelari : %i jam, %i menit, %i detik.\n", jam, menit, detik);
-   printf("--------------------------------------------------------------------\n");
+    printf("--------------------------------------------------------------------\n");
     printf("Pelari Tercepat : %s dengan waktu tempuh %i jam, %i menit, %i detik.\n",
-   printf("--------------------------------------------------------------------\n");
     mhs[0].nama,
 	mhs[0].wkt[0].hh, 
 	mhs[0].wkt[0].mm, 
 	mhs[0].wkt[0].ss);
+	printf("--------------------------------------------------------------------\n");
 	return 0;
 }

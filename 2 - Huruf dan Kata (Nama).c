@@ -1,3 +1,11 @@
+/*
+	Name: Program Reverse Kata dan Huruf (Nama)
+	Copyright: Sabeb (ArizkiNewbie)
+	Author: Arizki Putra Rahman
+	Date: 10/08/21 23:01
+	Description: Mulai Aja DUlu
+*/
+
 #include <stdio.h>
 #include <string.h>
 char huruf[50], kata[50];

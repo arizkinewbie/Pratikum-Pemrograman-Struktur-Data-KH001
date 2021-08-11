@@ -1,3 +1,11 @@
+/*
+	Name: Program Data Bilangan Random
+	Copyright: Sabeb (ArizkiNewbie)
+	Author: Arizki Putra Rahman
+	Date: 10/08/21 23:01
+	Description: Mulai Aja DUlu
+*/
+
 #include <stdio.h>
 #include <conio.h>
 #include <stdlib.h>

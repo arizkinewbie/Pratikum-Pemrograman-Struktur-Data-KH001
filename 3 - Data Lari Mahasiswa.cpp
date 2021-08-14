@@ -5,7 +5,6 @@
 	Date: 10/08/21 23:01
 	Description: Mulai Aja DUlu
 */
-
 #include <iostream>
 #include <sstream>
 #include <stdio.h>
@@ -28,8 +27,6 @@ struct waktu {
 struct data_mhs {
     char nama[MAX];
     int usia;
-    int tdetik;
-    char tWkt[MAX];
     waktu wkt[MAX];
 }mhs[MAX];
 
@@ -92,24 +89,13 @@ struct data_mhs temp_mhs;
    cout<<"\n\n";
    
   //Sorting data lari mahasiswa dari waktu yang tercepat (Bubble Sort - ascending)
- 	   for (int i=1;i<jml_mhs;i++) {
-            for (int b=0; b<jml_mhs-i; b++) {
+ 	   for (int i=0;i<jml_mhs-1;i++) {
+            for (int b=0; b<jml_mhs-i-1; b++) {
              if (mhs[b].wkt[b].detik > mhs[b+1].wkt[b+1].detik){
-                temp_mhs.tdetik = mhs[b].wkt[b].detik;
-                mhs[b].wkt[b].detik = mhs[b+1].wkt[b+1].detik;
-                mhs[b+1].wkt[b+1].detik = temp_mhs.tdetik;
-
-                strcpy(temp_mhs.nama, mhs[b].nama);
-                strcpy(mhs[b].nama, mhs[b+1].nama);
-                strcpy(mhs[b+1].nama, temp_mhs.nama);
-
-                temp_mhs.usia=mhs[b].usia;
-                mhs[b].usia=mhs[b+1].usia;
-                mhs[b+1].usia=temp_mhs.usia;
-
-                strcpy(temp_mhs.tWkt, mhs[b].wkt[b].nWkt);
-                strcpy(mhs[b].wkt[b].nWkt, mhs[b+1].wkt[b+1].nWkt);
-                strcpy(mhs[b+1].wkt[b+1].nWkt, temp_mhs.tWkt);
+                swap(mhs[b].wkt[b].detik, mhs[b+1].wkt[b+1].detik);
+                swap(mhs[b].nama, mhs[b+1].nama);
+                swap(mhs[b].usia, mhs[b+1].usia);
+                swap(mhs[b].wkt[b].nWkt, mhs[b+1].wkt[b+1].nWkt);
              }
             }
   	printf("Data Disorting berdasarkan Pelari Tercepat : \n");
